@@ -1,0 +1,29 @@
+<div class="row">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+			    <a class="navbar-brand" href="#">
+			        <img alt="Logo" src="/images/isologotipo.png" id="intraffic-logo">
+			    </a>
+		    </div>
+		    <ul class="nav nav-pills navbar-right" >
+				<li><a href="/news">Listar Noticias</a></li>
+		    </ul>
+		</div>
+	</nav>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 text-center">		
+		<div class="panel panel-primary" id="<%- news.id %>">
+			<div class="panel-heading">
+				<%= news.subject %>
+			</div>
+			<div class="panel-body">
+				<p><%= news.message %></p>					
+			</div>
+			<div class="panel-footer">
+				<p>Creado el: <%= news.fecha %></p>
+			</div>
+		</div>		
+	</div>
+</div>

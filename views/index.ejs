@@ -1,0 +1,42 @@
+<div class="row">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+		    <div class="navbar-header">
+			    <a class="navbar-brand" href="#">
+			        <img alt="Logo" src="/images/isologotipo.png" id="intraffic-logo">
+			    </a>
+		    </div>
+		    <ul class="nav nav-pills navbar-right" >
+				<li class="active"><a href="news">Listar Noticias</a></li>
+				<li><a href="news/create">Crear Nueva Noticia</a></li>
+		    </ul>
+		</div>
+	</nav>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2">
+		<div class="jumbotron text-center">
+		    <h1 class="jumboHeading">IntrafficNews</h1>
+		    <h2 class="jumboSubHeading">Novedades e informacion interna</h2>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 text-center">
+		<% _.each(News, function(n){ %>
+			<div class="col-md-4">
+				<div class="panel panel-primary" id="<%- n.id %>">
+					<div class="panel-heading">
+						<a href="news/<%- n.id %>"><%= n.subject %></a>
+					</div>
+					<div class="panel-body">
+						<p><%= n.message %></p>					
+					</div>
+					<div class="panel-footer">
+						<p>Creado el: <%= n.fecha %></p>
+					</div>
+				</div>
+			</div>			
+		<% }) %>
+	</div>
+</div>
